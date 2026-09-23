@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Release Notes</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: Georgia, "Times New Roman", serif;
+      background: Canvas;
+      color: CanvasText;
+    }
+
+    body {
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: clamp(3rem, 10vw, 8rem) 1.5rem;
+    }
+
+    h1 {
+      margin: 0 0 3rem;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+
+    nav {
+      max-width: 44rem;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid GrayText;
+      list-style: none;
+    }
+
+    .release-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid GrayText;
+      color: inherit;
+      font: 1.25rem/1.3 ui-sans-serif, sans-serif;
+      text-decoration: none;
+    }
+
+    .entry {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    time {
+      color: GrayText;
+      font-size: 0.875rem;
+    }
+
+    .release-link::after {
+      content: "\2192";
+    }
+
+    .release-link:hover,
+    .release-link:focus-visible,
+    .benchmark-link:hover,
+    .benchmark-link:focus-visible {
+      color: #d64b2a;
+    }
+
+    .benchmark {
+      margin-top: clamp(4rem, 10vw, 7rem);
+    }
+
+    .benchmark-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      max-width: 18ch;
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .benchmark-link {
+      flex: none;
+      color: inherit;
+      font: 0.875rem/1.3 ui-sans-serif, sans-serif;
+      text-underline-offset: 0.2em;
+    }
+
+    .benchmark-link::after {
+      content: " \2197";
+    }
+
+    .benchmark-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid GrayText;
+      border-radius: 4px;
+      background: white;
+    }
+
+    @media (max-width: 36rem) {
+      .benchmark-header {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>AI Release Notes</h1>
+    <nav aria-label="Release notes">
+      <ul>
+        <li>
+          <a class="release-link" href="260922-anthropic-opus-5.5.html">
+            <span class="entry">
+              <span>Anthropic Claude Opus 5.5</span>
+              <time datetime="2026-09-22">22 September 2026</time>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="release-link" href="260922-openai-gpt6-sol-and-luna.html">
+            <span class="entry">
+              <span>OpenAI GPT-6 Sol and Luna</span>
+              <time datetime="2026-09-22">22 September 2026</time>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="benchmark" aria-labelledby="benchmark-title">
+      <div class="benchmark-header">
+        <h2 id="benchmark-title">Intelligence Index vs. cost per task</h2>
+        <a class="benchmark-link" href="https://artificialanalysis.ai/models#intelligence-comparison-tabs" target="_blank" rel="noopener noreferrer">Open Artificial Analysis</a>
+      </div>
+      <a href="https://artificialanalysis.ai/models#intelligence-index-vs-cost-per-intelligence-index-task" target="_blank" rel="noopener noreferrer">
+        <img
+          class="benchmark-image"
+          src="img/artificial-analysis-intelligence-vs-cost.png"
+          alt="Scatter plot comparing the Artificial Analysis Intelligence Index with cost per task across AI models"
+          loading="lazy"
+        >
+      </a>
+    </section>
+  </main>
+</body>
+</html>
